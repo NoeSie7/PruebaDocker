@@ -1,0 +1,13 @@
+version: '2.1'
+
+services:
+  alquilercochesbackend:
+    image: alquilercochesbackend
+    ports:
+      - 3000:3000
+  alquilercochesfrontend:
+    image: alquilercochesfrontend
+    ports:
+      - 80:80
+    links:
+      - alquilercochesbackend
